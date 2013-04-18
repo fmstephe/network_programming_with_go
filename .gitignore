@@ -1,3 +1,5 @@
+netclient
+udptodserver
 echoserver
 todserver
 *.swp
