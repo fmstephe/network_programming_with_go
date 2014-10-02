@@ -1,12 +1,11 @@
 package main
 
 import (
-	"net"
 	"fmt"
+	"net"
 	"os"
 	"time"
 )
-
 
 func main() {
 	service := ":1200"
@@ -20,7 +19,7 @@ func main() {
 			fmt.Fprintf(os.Stderr, "Client connection error %s", err.Error())
 		}
 		daytime := time.Now().String()
-		_, err = conn.Write([]byte(daytime+"\n"))
+		_, err = conn.Write([]byte(daytime + "\n"))
 		if err != nil {
 			fmt.Fprintf(os.Stderr, "Client write error %s", err.Error())
 		}
